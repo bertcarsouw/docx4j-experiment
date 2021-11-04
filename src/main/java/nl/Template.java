@@ -11,6 +11,25 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * benodigde dependencies in pom:
+ *
+ * <dependency>
+ *     <groupId>org.docx4j</groupId>
+ *     <artifactId>docx4j</artifactId>
+ *     <version>6.1.2</version>
+ * </dependency>
+ * <dependency>
+ *     <groupId>javax.xml.bind</groupId>
+ *     <artifactId>jaxb-api</artifactId>
+ *     <version>2.3.1</version>
+ * </dependency>
+ * <dependency>
+ *     <groupId>com.sun.xml.bind</groupId>
+ *     <artifactId>jaxb-impl</artifactId>
+ *     <version>2.3.4</version>
+ * </dependency>
+ */
 public class Template {
 
     private WordprocessingMLPackage wordprocessingMLPackage;
@@ -19,6 +38,18 @@ public class Template {
         this.loadTemplate(templateName);
     }
 
+    /**
+     * voorbeeld word template:
+     *
+     * Beste ${voornaam} ${achternaam},
+     *
+     * Hier is uw brief.
+     *
+     * Doei.
+     *
+     * de computert.
+     * ${datum}
+     */
     public void fillTemplate(String voornaam, String achternaam, Date datum) throws Exception {
         VariablePrepare.prepare(wordprocessingMLPackage);
 
