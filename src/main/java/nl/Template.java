@@ -1,6 +1,7 @@
 package nl;
 
 import org.docx4j.Docx4J;
+import org.docx4j.model.datastorage.migration.FromVariableReplacement;
 import org.docx4j.model.datastorage.migration.VariablePrepare;
 import org.docx4j.openpackaging.exceptions.Docx4JException;
 import org.docx4j.openpackaging.packages.WordprocessingMLPackage;
